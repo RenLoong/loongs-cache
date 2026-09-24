@@ -1,0 +1,25 @@
+{
+    "name": "loongs/cache",
+    "description": "loong-swoole cache package — file, redis, memory stores",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.4",
+        "psr/simple-cache": "^3.0"
+    },
+    "suggest": {
+        "ext-redis": "Required for the redis cache driver",
+        "ext-swoole": "Required for the optional Swoole\\Table driver",
+        "loongs/framework": "Integrates with Loongs\\Redis\\RedisManager when present"
+    },
+    "autoload": {
+        "psr-4": {
+            "Loongs\\Cache\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
