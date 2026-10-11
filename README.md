@@ -28,3 +28,7 @@ $store->increment('hits');
 
 PSR-16: `Loongs\Cache\Repository` implements `Psr\SimpleCache\CacheInterface`.
 Logical keys must not contain `{}()/\@:` (PSR-16). Prefix (e.g. `loong:cache:`) is applied by stores.
+
+## Project config
+
+On install into a Loongs app, missing `config/*.php` stubs from this package are copied into the project `config/` directory (never overwritten). The app root should run `bin/publish-loongs-configs.php` from Composer `post-autoload-dump` (see `loongs/uuims` / `loongs/loongs` templates).
